@@ -34,10 +34,6 @@ SAMPLES_PER_TRACK = int(SAMPLE_RATE * DURATION)
 N_MFCC = 40
 MAX_PAD_LEN = 40
 
-# Logo in Sidebar
-logo_path = r"C:\Users\HP\OneDrive\Desktop\Speech Emotion Detection\Speech_Emotion_Recognition_app\Assets\SOU_Logo.png" 
-st.sidebar.image(logo_path, use_column_width=True)
-
 def extract_features(audio_data, sr=SAMPLE_RATE, max_pad_len=MAX_PAD_LEN, n_mfcc=N_MFCC, n_fft=512):
     """
     Extracts MFCC features from audio data.
@@ -176,10 +172,7 @@ if st.sidebar.button("Start Recording"):
     temp_wav.close()
 
 # Adding project contributors' names at the bottom of the sidebar
-st.sidebar.markdown("**Project Contributors**")
+st.sidebar.markdown("**Project Contributor**")
 st.sidebar.markdown("""
 - Gunja Shah
-- Janvi Bhagchandani
-- Snigdha Joshi
-- Rajeev Joshi
 """)
